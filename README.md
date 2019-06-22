@@ -1,2 +1,1 @@
 # leetcode-notes
-Array:
