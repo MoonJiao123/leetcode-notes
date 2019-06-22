@@ -1,0 +1,32 @@
+remove val from array
+class Solution {
+    public int removeElement(int[] nums, int val) {
+        int len = 0;
+        for(int i = 0; i < nums.length; i++){
+            if(nums[i] != val){
+                nums[len] = nums[i];
+                len++;
+            } 
+        }
+        return len;
+    }
+}
+
+remove duplicates
+class Solution {
+    public int removeDuplicates(int[] nums) {
+        //return 0 if length is 0
+        if(nums.length == 0){
+            return 0;
+        }
+        //otherwise from index 0 and compare with rest of elements
+        int len = 0;
+        for(int j = 1; j < nums.length; j++){
+            if(nums[len] != nums[j]){
+                len++;
+                nums[len] = nums[j];
+            }
+        }
+        return len + 1;
+    }
+}
